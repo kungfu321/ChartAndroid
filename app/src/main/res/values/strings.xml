@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">ChartAndroid</string>
+
+    <string-array name="spinner_hour">
+        <item>1 Giờ</item>
+        <item>2 Giờ</item>
+        <item>3 Giờ</item>
+        <item>4 Giờ</item>
+    </string-array>
+
+    <string-array name="spinner_day">
+        <item>1 Ngày</item>
+        <item>2 Ngày</item>
+        <item>3 Ngày</item>
+        <item>4 Ngày</item>
+    </string-array>
+</resources>

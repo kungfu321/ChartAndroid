@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:background="#04a7f4">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Thống Kê"
+            android:textSize="25sp"
+            android:textColor="#fff"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:src="@drawable/user"
+            android:scaleType="centerCrop"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="25dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:text="Tổng oder qua mỗi ngày"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:textColor="#606366"
+                android:layout_height="wrap_content" />
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/line_chart"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="400dp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:layout_marginBottom="20dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Tổng Customer và Customer "
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:textColor="#606366"
+                    android:layout_height="wrap_content" />
+
+                    <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Mới "
+                    android:id="@+id/test"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:textColor="#ff0000"
+                    android:layout_height="wrap_content" />
+
+                    <TextView
+                    android:layout_width="wrap_content"
+                    android:text="qua mỗi ngày"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:textColor="#606366"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/bar_chart"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="400dp" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="200dp"
+                    android:gravity="center"
+                    android:layout_marginLeft="50dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="Customer"
+                        android:textSize="15sp"
+                        android:layout_height="wrap_content" />
+
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:background="#ff8b02"
+                        android:layout_height="20dp"/>
+
+                    </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="200dp"
+                    android:gravity="center"
+                    android:layout_marginRight="50dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="Customer Mới"
+                        android:textSize="15sp"
+                        android:layout_height="wrap_content" />
+
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:background="#39b54a"
+                        android:layout_height="20dp"/>
+
+                </LinearLayout>
+
+                </RelativeLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:text="Số lượng LIKE, COMMENT và CONVERSATIONS mỗi ngày"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="20dp"
+                android:textColor="#606366"
+                android:layout_height="wrap_content" />
+
+            <com.github.mikephil.charting.charts.CombinedChart
+                android:id="@+id/bar_line_chart"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="400dp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:background="#f7f7f7"
+                android:gravity="center"
+                android:weightSum="90"
+                android:layout_marginTop="10dp"
+                android:layout_height="100dp">
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:id="@+id/conversations"
+                    android:layout_weight="30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="Conversations"
+                        android:textSize="15sp"
+                        android:layout_height="wrap_content" />
+
+                    <ImageView
+                        android:src="@drawable/convarsation"
+                        android:layout_width="120dp"
+                        android:layout_height="60dp" />
+
+                    </LinearLayout>
+
+                <LinearLayout
+                    android:background="#dedede"
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"/>
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_weight="30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="Comment"
+                        android:textSize="15sp"
+                        android:layout_height="wrap_content" />
+
+                    <ImageView
+                        android:src="@drawable/comment"
+                        android:layout_width="120dp"
+                        android:layout_height="60dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:background="#dedede"
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"/>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_weight="30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="Likes"
+                        android:textSize="15sp"
+                        android:layout_height="wrap_content" />
+
+                    <LinearLayout
+                        android:layout_width="40dp"
+                        android:background="#ed1c24"
+                        android:layout_height="45dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
